@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+<body>
+  <i class="bi bi-check"></i>
+  <div class="form-outline" style="width: 22rem;">
+    <input type="email" id="email" name="email" class="form-control" /> 
+    <label class="form-label" for="email">Email</label>
+  </div>
+  <!-- Button trigger modal -->
+  <button id='send' name='send' type="button" class="btn btn-primary" data-mdb-toggle="modal"
+    data-mdb-target="#exampleModal">
+    Оставить заявку
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          На вашу почту было отправлено письмо с кодом для подтверждения вашей почты. Пожалуйста, проверьте вашу почту
+          <div class="form-outline">
+            <input type="text" name='inputcode' id="inputcode" class="form-control" />
+            <label class="form-label" for="inputcode">Код подтверждения</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+            Close
+          </button>
+          <div id='OrClose'> <button type="button" id='sendcode' name='sendcode' class="btn btn-primary">Подтверить</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+    async function postData(url = '', data = {}) {
+      const response = await fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(data)
+      });
+      return await response.json();
+    }
+    let email = 0
+    let code = 0
+
+    let sendcode = document.getElementById('sendcode')
+    sendcode.onclick = function () {
+      let inputcode = document.getElementById('inputcode').value
+      if(parseInt(inputcode) == parseInt(code))
+      {
+        console.log('НУ ДА И ЧЕ')
+        postData('http://localhost:3000/confirm', {
+          email: email,
+          check: true
+        })
+          .catch(err => console.log(err))
+      }
+      else {
+        console.log('НЕА')
+        document.getElementById('inputcode').value = null }
+    }
+    let send = document.getElementById("send")
+    send.onclick = function () {
+      code = Math.floor(Math.random() * (10000 + 1) + 0)
+      console.log(code)
+      email = document.getElementById("email").value
+      postData('http://localhost:3000/register', {
+        email: email,
+        code: code
+      })
+        .catch(err => console.log(err))
+    }
+  </script>
+</body>
+
+</html>
