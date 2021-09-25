@@ -2,58 +2,259 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Material Design for Bootstrap</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
-  <!-- Google Fonts Roboto -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
-  <!-- MDB -->
-  <link rel="stylesheet" href="css/mdb.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Material Design for Bootstrap</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
 </head>
+
 <body>
-  <i class="bi bi-check"></i>
-  <div class="form-outline" style="width: 22rem;">
-    <input type="email" id="email" name="email" class="form-control" /> 
-    <label class="form-label" for="email">Email</label>
-  </div>
-  <!-- Button trigger modal -->
-  <button id='send' name='send' type="button" class="btn btn-primary" data-mdb-toggle="modal"
-    data-mdb-target="#exampleModal">
-    Оставить заявку
-  </button>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+    <!-- Start your project here-->
+    <div id="carouselExampleInterval" class="carousel slide" data-mdb-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-mdb-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-mdb-interval="1000000000">
+                    <div class="first_hover">
+                        <div class="first_block">
+                            <div class="header_first">
+                                <div class="logo_first">
+                                    <img class="img_comp" src="/img/horizontal_on_white_by_logaster 1.png" alt="Error">
+                                </div>
+                                <nav class="nav">
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><a
+                                            class="nav_link" href="#">Оставить заявку</a></button>
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="1" aria-label="Slide 2"><a class="nav_link" href="#">О
+                                            нас</a></button>
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="2" aria-label="Slide 3"><a class="nav_link"
+                                            href="#">Информация о туре</a></button>
+                                </nav>
+                            </div>
+                            <div class="main_first_block">
+                                <div class="main_text">
+                                    <div class="main_sub_text">
+                                        Тур выходного дня
+                                    </div>
+                                    <div class="main_header_text">
+                                        Робинзон и Ко
+                                    </div>
+                                    <div class="main_text">
+                                        Присоединяйтесь к нам и отправься в приключение как Робинзон и Ко!
+                                    </div>
+                                    <div class="main_sub_reg">
+                                        Оставь заявку на участие
+                                    </div>
+                                    <div class="register__block">
+                                        <tr>
+
+                                            <td><input type="text" placeholder="E-mail отправителя" id='email' name="f1" size="30"
+                                                    style="width:95%;" maxlength="70"> </td>
+
+                                        </tr>
+                                        <div class="btt_block">
+                                            <button class="btt_2" id='send' data-mdb-toggle="modal"
+                                            data-mdb-target="#exampleModal">
+                                                <img class="img2" src="/img/Group 55.png" alt="Error">
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="main_sup_descr">
+                                        Место проведения: Екатеринбург, на площади Лукашенко
+                                    </div>
+                                </div>
+                                <div class="main_img">
+                                    <img class="img_comp_1" src="/img/image fffff1.png" alt="Error">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="carousel-item" data-mdb-interval="10000000000">
+                    <div class="first_hover">
+                        <div class="sec_block_hover_2">
+                            <div class="header_first">
+                                <div class="logo_first">
+                                    <img class="img_comp" src="/img/horizontal_on_white_by_logaster 1.png" alt="Error">
+                                </div>
+                                <nav class="nav">
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><a
+                                            class="nav_link" href="#">Оставить заявку</a></button>
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="1" aria-label="Slide 2"><a class="nav_link" href="#">О
+                                            нас</a></button>
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="2" aria-label="Slide 3"><a class="nav_link"
+                                            href="#">Информация о туре</a></button>
+                                </nav>
+                            </div>
+                            <div class="sec_block">
+                                <div class="sec_header_block">
+                                    <div class="sec_header">
+                                        Прогулка.exe
+                                    </div>
+                                    <div class="sec_header_text">
+                                        Мы - Прогулка.exe, экстарвогантная и оптимистичная команда, возглавляющая туры
+                                        на свежем воздухе
+                                    </div>
+                                </div>
+                                <div class="sec_main">
+                                    <div class="sec_main_header">
+                                        Главные цели
+                                    </div>
+                                    <div class="sec_main_text">
+                                        Главная цель нашей компании - это сделать ваш отдых максимально комфртным.
+                                        Посетив наш тур вы получите:
+                                    </div>
+                                    <div class="main_selector">
+                                        -Качественное обслуживание <br>
+                                        -Разнообразие услуг <br>
+                                        -Внимание и заботу <br>
+                                        -Профессиональную консультацию по любым вопросам касательно путешествий <br>
+                                        -Индивидуальный подход с учетом ваших интересов<br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="carousel-item" data-mdb-interval="1000000000">
+                    <div class="first_hover">
+                        <div class="sec_block_hover_2">
+                            <div class="header_first">
+                                <div class="logo_first">
+                                    <img class="img_comp" src="/img/horizontal_on_white_by_logaster 1.png" alt="Error">
+                                </div>
+
+                                <nav class="nav">
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><a
+                                            class="nav_link" href="#">Оставить заявку</a></button>
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="1" aria-label="Slide 2"><a class="nav_link" href="#">О
+                                            нас</a></button>
+                                    <button class="btt" type="button" data-mdb-target="#carouselExampleIndicators"
+                                        data-mdb-slide-to="2" aria-label="Slide 3"><a class="nav_link"
+                                            href="#">Информация о туре</a></button>
+                                </nav>
+                            </div>
+                            <div class="sec_block">
+                                <div class="sec_header_block">
+                                    <div class="sec_header">
+                                        Рассписание и цены
+                                    </div>
+                                    <div class="sec_header_text">
+                                        Стоимость тура - 100 долларов
+                                    </div>
+                                    <div class="sec_header_text">
+                                        Дата тура: 30 декабря - 5 января
+                                    </div>
+                                </div>
+                                <div class="th_main">
+                                    <div class="sec_main_header">
+                                        Вас ждет
+                                    </div>
+                                    <div class="th_hover">
+                                        <div class="th_main_block">
+                                            <div class="th_header">
+                                                Питание
+                                            </div>
+                                            <div class="th_img">
+                                                <img class="img_comp_2" src="/img/eat1.png" alt=" Error">
+                                            </div>
+                                        </div>
+                                        <div class="th_main_block">
+                                            <div class="th_header">
+                                                Прогулки на свежем воздухе
+                                            </div>
+                                            <div class="th_img">
+                                                <img class="img_comp_2" src="/img/wood1.png" alt=" Error">
+                                            </div>
+                                        </div>
+                                        <div class="th_main_block">
+                                            <div class="th_header">
+                                                Приятное общение
+                                            </div>
+                                            <div class="th_img">
+                                                <img class="img_comp_2" src="/img/speak1.png" alt=" Error">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="modal-body">
-          На вашу почту было отправлено письмо с кодом для подтверждения вашей почты. Пожалуйста, проверьте вашу почту
-          <div class="form-outline">
-            <input type="text" name='inputcode' id="inputcode" class="form-control" />
-            <label class="form-label" for="inputcode">Код подтверждения</label>
-          </div>
+        <div class="modal fade" style="z-index: 9999" id="exampleModal" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true"
+        >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title
+                    </h5>
+                    <button type="button" class="btn-close"
+                        data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    На вашу почту было отправлено письмо с кодом для
+                    подтверждения вашей почты. Пожалуйста, проверьте вашу почту
+                    <div class="form-outline">
+                        <input type="text" name='inputcode' id="inputcode"
+                            class="form-control" />
+                        <label class="form-label" for="inputcode">Код
+                            подтверждения</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div id='OrClose'> <button type="button" id='sendcode'
+                            name='sendcode' 
+                            data-mdb-dismiss="modal"
+                            class="btn btn-primary disabled">Подтверить</button></div>
+                </div>
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-            Close
-          </button>
-          <div id='OrClose'> <button type="button" id='sendcode' name='sendcode' class="btn btn-primary">Подтверить</button></div>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript">
+    </div>
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript">
     async function postData(url = '', data = {}) {
       const response = await fetch(url, {
         method: 'POST',
@@ -69,6 +270,18 @@
       });
       return await response.json();
     }
+
+
+    let inputcode1 = document.getElementById('inputcode')
+    inputcode1.oninput = () =>
+    {
+      if(parseInt(inputcode1.value) == parseInt(code))
+      {
+          document.getElementById('sendcode').className = 'btn btn-primary'
+      }
+      else {}
+    }
+
     let email = 0
     let code = 0
 
@@ -77,15 +290,13 @@
       let inputcode = document.getElementById('inputcode').value
       if(parseInt(inputcode) == parseInt(code))
       {
-        console.log('НУ ДА И ЧЕ')
         postData('http://localhost:3000/confirm', {
           email: email,
-          check: true
+          check: parseInt(inputcode)
         })
           .catch(err => console.log(err))
       }
       else {
-        console.log('НЕА')
         document.getElementById('inputcode').value = null }
     }
     let send = document.getElementById("send")
@@ -99,7 +310,7 @@
       })
         .catch(err => console.log(err))
     }
-  </script>
+    </script>
 </body>
 
 </html>

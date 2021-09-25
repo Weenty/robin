@@ -1,0 +1,212 @@
+.first_block{
+    width: 100%;
+    max-width: 1400px;
+ height: 900px;
+    margin: 0 auto;
+    background: #FFFEF6;
+box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.06);
+border-radius: 8px;
+padding-bottom: 30px;
+
+}
+.first_hover{
+    width: 100%;
+    height: 100%;
+    background: #FCD1C4;;
+backdrop-filter: blur(16px);
+padding-top: 60px;
+padding-bottom: 60px;
+}
+.header_first{
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+.logo_first{
+    
+}
+.nav_link{
+    color: black;
+    padding-left: 100px;
+}
+.btt{
+    background-color: white;
+    border: none;
+    padding-left: 40px;
+}
+.btt_2{
+    background-color: white;
+    border: none;
+}
+.register__block{
+    display: flex;
+    width: 550px;
+}
+.img2{
+    height: 45px;
+    position: absolute;
+    z-index: 50;
+    top: 506px;
+    right:0 ;
+    left: 580px;
+    background-color: white;
+    border: none;
+    padding-top: 0px;
+}
+
+.main_first_block{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;  
+}
+.main_sub_text{
+    font-family: Actor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    
+    color: #3E3E3E
+}
+.main_header_text{
+    font-family: Actor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 74px;
+    line-height: 89px;
+    /* identical to box height */
+    
+    
+    color: #3E3E3E;
+    
+}
+.main_text{
+    font-family: Actor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    /* or 175% */
+    
+    letter-spacing: 0.03em;
+    padding-top: 20px;
+}
+.main_sub_reg{
+    font-family: Actor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    /* identical to box height, or 175% */
+    
+    letter-spacing: 0.03em;
+    padding-top: 20px;
+    
+}
+.main_sup_descr{
+    font-family: Actor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 42px;
+    /* identical to box height, or 210% */
+    
+    letter-spacing: 0.03em;
+    
+    color: #3E3E3E;
+    
+}
+.img_comp_1{
+    padding-left: 0px;
+    width: 675px;
+height: 515px;
+left: 794px;
+top: 357px;
+border-radius: 51px;
+}
+.sec_block{
+
+    
+}
+.sec_block_hover_2{
+    width: 100%;
+    max-width: 1400px;
+    height: 900px;
+    margin: 0 auto;
+    background: #FFFEF6;
+box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.06);
+border-radius: 8px;
+}
+.sec_header{
+    font-family: Actor;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 48px;
+
+color: #3E3E3E;
+}
+.sec_main_header{
+    font-family: Actor;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    
+    color: #3E3E3E;  
+}
+.sec_header_block{
+    align-items: center;
+}
+.sec_header{
+  text-align: center; 
+  
+}
+.sec_header_text{
+    text-align: center;
+    padding-top: 40px; 
+}
+.sec_main_header{
+    text-align: center;
+    padding-top: 80px; 
+}
+.sec_main_text{
+    text-align: center;
+    padding-top: 40px; 
+}
+.main_selector{
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: 10px; 
+}
+.th_hover{
+    display: flex;
+    padding-top: 20px;
+}
+.th_header{
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: Actor;
+font-style: normal;
+font-weight: normal;
+font-size: 35px;
+line-height: 42px;
+/* identical to box height, or 120% */
+
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #3E3E3E;
+}
+.img_comp_2{
+    width: 450px;
+    height: 300px;
+}
+.carousel-control-prev{
+    max-width: 80px;
+}
+.carousel-control-next{
+    max-width: 80px;
+    max-height: 100px;
+}

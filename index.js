@@ -8,11 +8,12 @@ const params = {
     host: "localhost",
     port: '3306', //3306  
     user: "root",
-    database: "psyho", //m toxa
-    password: "root", //NTI20201106_sqsw33179
+    database: "email", //m toxa
+    password: "NTI20201106_sqsw33179", //NTI20201106_sqsw33179
 }
 try {
     let email = null
+    let code = null
     let connection = mysql.createConnection(params);
     const query = util.promisify(connection.query).bind(connection);
     async function ExQueary(query1) {
@@ -38,18 +39,26 @@ try {
         }
     });
 
-    app.post("/confirm", urlencodedParser, function (request, response) {
+    app.post("/confirm", urlencodedParser, async function (request, response) {
         response.send({
             email: request.body.email,
             code: request.body.check
           })
           if(email==request.body.email)
           {
+              try{
+              let query2 = "INSERT INTO email (email) VALUES ('"+ email +"')"
+              await ExQueary(query2)
               console.log('записали в базу данных')
+              }
+              catch {
+                  console.log('почта уже есть')
+              }
           }
           else {console.log('послали')}
         })
     app.post("/register", urlencodedParser, function (request, response) {
+        try{
         response.send({
             email: request.body.email,
             code: request.body.code
@@ -57,20 +66,30 @@ try {
           console.log(request.body.email)
           console.log(request.body.code)
           email = request.body.email
-          let code = request.body.code
-          var transporter = nodemailer.createTransport({
-            service: 'Gmail',
-            auth: {
-                user: 'findo3184@gmail.com',
-                pass: 'i33a05an'
-            }
-            });
-            transporter.sendMail({
-                from: 'findo3184@gmail.com',
-                  to: email,
-                  subject: 'Подтверждение почты',
-                  html: '<h1>Код для подтверждения почты: </h1>' +'<h1>'+ code + '</h1>'
-                });
+          if(email==null)
+          {
+            console.log('пустой маил')
+          }
+          else {
+            code = request.body.code
+            var transporter = nodemailer.createTransport({
+              service: 'Gmail',
+              auth: {
+                  user: 'findo3184@gmail.com',
+                  pass: 'i33a05an'
+              }
+              });
+              transporter.sendMail({
+                  from: 'findo3184@gmail.com',
+                    to: email,
+                    subject: 'Подтверждение почты',
+                    html: '<h1>Код для подтверждения почты: </h1>' +'<h1>'+ code + '</h1>'
+                  });
+          }
+        }
+        catch {
+            console.log(e)
+        }
     })
 
 
